@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lussier Aesthetics — Refined Aesthetic Treatments in Valencia, CA</title>
+<meta name="description" content="An aesthetic of restraint. Refined, non-surgical treatments under the medical direction of Marc Lussier, MD, FACS — Santa Clarita Valley's #1 cosmetic surgeon since 2011." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+/* ============================================================
+   LUSSIER AESTHETICS — Editorial Luxury Landing
+   Aesthetic: Cormorant Garamond + Jost
+   Palette : bone, ink, cream, muted gold
+   ============================================================ */
+
+:root {
+  /* Palette */
+  --bone:        #F4EFE8;
+  --bone-2:      #EBE3D8;
+  --paper:       #FBF8F3;
+  --ink:         #161310;
+  --ink-soft:    #2E2A25;
+  --smoke:       #6A6259;
+  --hairline:    #D9D1C3;
+  --hairline-2:  #C8BEAC;
+
+  --gold:        oklch(0.72 0.085 75);
+  --gold-deep:   oklch(0.62 0.09 70);
+  --gold-pale:   oklch(0.92 0.04 80);
+
+  /* Dark surfaces */
+  --ink-bg:      #0E0C0A;
+  --ink-bg-2:    #1A1714;
+
+  /* Type */
+  --serif:       'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  --sans:        'Syne', system-ui, sans-serif;
+  --mono:        'JetBrains Mono', ui-monospace, monospace;
+
+  /* Motion */
+  --ease:        cubic-bezier(.2, .8, .2, 1);
+  --ease-out:    cubic-bezier(.16, 1, .3, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "kern";
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--ink); color: var(--bone); }
+
+/* ----------------- Layout primitives ----------------- */
+.container {
+  width: min(1440px, 92vw);
+  margin: 0 auto;
+}
+.container--narrow { max-width: 900px; }
+.container--wide   { width: min(1640px, 96vw); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+.eyebrow--gold { color: var(--gold-deep); }
+.eyebrow--light { color: rgba(244, 239, 232, 0.7); }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+.display {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3.2rem, 7.2vw, 7.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+}
+.display em,
+.serif-italic {
+  font-style: italic;
+  font-weight: 300;
+}
+.h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4.6vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+.lede {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 44ch;
+}
+
+/* ----------------- Buttons ----------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1.1rem 2rem;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bone);
+  border-radius: 0;
+  transition: all 0.4s var(--ease);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn:hover { background: transparent; color: var(--ink); }
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.btn--ghost:hover { background: var(--ink); color: var(--bone); }
+.btn--gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.btn--gold:hover {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn--light {
+  background: var(--bone);
+  border-color: var(--bone);
+  color: var(--ink);
+}
+.btn--light:hover { background: transparent; color: var(--bone); }
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(244, 239, 232, 0.4);
+  color: var(--bone);
+}
+.btn--outline-light:hover {
+  background: var(--bone);
+  color: var(--ink);
+  border-color: var(--bone);
+}
+.btn--block { display: flex; width: 100%; }
+.btn .arrow {
+  transition: transform 0.4s var(--ease);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ----------------- Header (hidden until scrolled) ----------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: var(--ink);
+  color: var(--bone);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transform: translateY(-100%);
+  transition: transform 0.45s var(--ease), box-shadow 0.3s var(--ease);
+}
+.site-header.is-visible { transform: translateY(0); }
+.site-header.is-stuck { box-shadow: 0 1px 0 rgba(255,255,255,0.08); }
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+  gap: 2rem;
+}
+.site-header .logo {
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.site-header .logo svg {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+.header__phone {
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.78);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: color 0.2s var(--ease);
+}
+.header__phone:hover { color: var(--gold); }
+.header__phone svg { width: 14px; height: 14px; opacity: 0.7; }
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  background: var(--gold);
+  color: var(--ink);
+  border: 1px solid var(--gold);
+  transition: all 0.3s var(--ease);
+}
+.header-cta:hover {
+  background: transparent;
+  color: var(--gold);
+}
+@media (max-width: 700px) {
+  .site-header__inner { padding: 0.9rem 0; }
+  .header__phone { display: none; }
+  .header-cta { padding: 0.7rem 1.1rem; font-size: 0.65rem; }
+}
+
+/* ----------------- Hero (full-screen editorial) ----------------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: url('site-images/image-06.png') 35% center/cover no-repeat;
+  overflow: hidden;
+  color: var(--bone);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0.15) 50%, rgba(10,9,8,0.45) 100%),
+    linear-gradient(to top, rgba(10,9,8,0.7) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: clamp(1.8rem, 3.5vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  z-index: 2;
+}
+.hero__logo { display: block; line-height: 0; }
+.hero__logo svg {
+  width: clamp(180px, 32.4vw, 522px);
+  height: auto;
+  display: block;
+  opacity: 0;
+  animation: rise 1.1s 0.05s var(--ease-out) forwards;
+}
+.hero__top-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 0.4rem;
+  opacity: 0;
+  animation: rise 1.1s 0.2s var(--ease-out) forwards;
+}
+.hero__bottom {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  z-index: 2;
+}
+.hero__copy {
+  max-width: 70ch;
+  text-align: right;
+}
+.hero__copy > * {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: rise 1.1s var(--ease-out) forwards;
+}
+.hero__copy > *:nth-child(1) { animation-delay: 0.3s; }
+.hero__copy > *:nth-child(2) { animation-delay: 0.44s; }
+.hero__copy > *:nth-child(3) { animation-delay: 0.58s; }
+.hero__copy > *:nth-child(4) { animation-delay: 0.72s; }
+.hero__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3.2rem, 7vw, 8.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  color: var(--bone);
+  margin: 0 0 1.4rem;
+}
+.hero__title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold);
+}
+.hero__lede {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(244,239,232,0.62);
+  max-width: 60ch;
+  margin: 0 0 2rem auto;
+}
+.hero__cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.hero__trust {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: rgba(244,239,232,0.45);
+}
+.hero__trust-stars { display: flex; gap: 2px; color: var(--gold-deep); }
+.hero__trust-stars svg { width: 14px; height: 14px; fill: currentColor; }
+.hero__trust strong { color: rgba(244,239,232,0.85); font-weight: 500; }
+@media (max-width: 700px) {
+  .hero__top-right .header__phone { display: none; }
+  .hero__copy { max-width: 100%; }
+}
+.hero__copy > *:nth-child(5) { animation-delay: 0.64s; }
+@keyframes rise {
+  to { opacity: 1; transform: none; }
+}
+
+/* ----------------- Marquee trust strip ----------------- */
+.marquee {
+  background: var(--ink);
+  color: var(--bone);
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 1.4rem 0;
+  margin-top: 0;
+}
+.marquee__track {
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: marquee 50s linear infinite;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  align-items: center;
+}
+.marquee__track > span { display: inline-flex; align-items: center; gap: 4rem; }
+.marquee__dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--gold); display: inline-block;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ----------------- Section common ----------------- */
+section { position: relative; }
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+.section--cream    { background: var(--bone-2); }
+.section--paper    { background: var(--paper); }
+.section--ink      { background: var(--ink-bg); color: var(--bone); }
+.section-head {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 900px) {
+  .section-head {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+}
+.section-head__lede { color: var(--smoke); max-width: 44ch; font-size: 1.02rem; line-height: 1.6; }
+.section--ink .section-head__lede { color: rgba(244,239,232,0.65); }
+.section--ink .h2 { color: var(--bone); }
+.section--ink .eyebrow { color: rgba(244,239,232,0.7); }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* ----------------- Approach (Philosophy + Pillars) ----------------- */
+.approach__intro {
+  display: block;
+  max-width: 72ch;
+  margin-bottom: clamp(3rem, 5vw, 4rem);
+}
+.approach__quote {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 1.2rem 0 1.2rem;
+  color: var(--bone);
+}
+.approach__quote em { font-style: italic; color: var(--gold); }
+.approach__lede {
+  color: rgba(244,239,232,0.65);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ----------------- Pillars (dark) ----------------- */
+.pillars__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+@media (min-width: 800px) {
+  .pillars__grid { grid-template-columns: repeat(3, 1fr); }
+}
+.pillar {
+  padding: 3rem 2.5rem 3rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+}
+@media (min-width: 800px) {
+  .pillar { border-bottom: none; padding: 3.5rem 2.5rem; }
+  .pillar + .pillar { border-left: 1px solid rgba(255,255,255,0.12); }
+}
+.pillar__num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 3rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.pillar__title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--bone);
+}
+.pillar__body {
+  color: rgba(244,239,232,0.65);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ----------------- Treatments index ----------------- */
+.treatments-split {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .treatments-split { grid-template-columns: 1fr 1fr; min-height: 85vh; }
+}
+.treatments-split__left {
+  padding: clamp(5rem, 10vw, 9rem) clamp(2rem, 6vw, 5rem);
+}
+.treatments-split__img {
+  position: relative;
+  min-height: 420px;
+}
+.treatments-split__img img,
+.treatments-split__img video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 25% top;
+}
+.t-accordion {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--hairline-2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.5rem;
+}
+.t-item {
+  border-bottom: 1px solid var(--hairline);
+  overflow: hidden;
+}
+.t-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  align-items: center;
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+.t-item__trigger:hover { color: var(--gold-deep); }
+.t-item__trigger em { font-style: italic; color: var(--gold-deep); }
+.t-item__icon {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  position: relative;
+  opacity: 0.4;
+  transition: opacity 0.2s, transform 0.3s var(--ease);
+}
+.t-item__icon::before,
+.t-item__icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 1px;
+}
+.t-item__icon::before { width: 12px; height: 1.5px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.t-item__icon::after  { width: 1.5px; height: 12px; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: transform 0.3s var(--ease); }
+.t-item.is-open .t-item__icon::after { transform: translate(-50%,-50%) rotate(90deg); }
+.t-item.is-open .t-item__icon { opacity: 1; }
+.t-item__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease);
+}
+.t-item.is-open .t-item__panel { grid-template-rows: 1fr; }
+.t-item__panel-inner {
+  overflow: hidden;
+}
+.t-item__list {
+  list-style: none;
+  padding: 0 0 1.4rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+}
+.t-item__list li {
+  font-size: 0.82rem;
+  color: var(--smoke);
+  padding-left: 0.85rem;
+  position: relative;
+}
+.t-item__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+/* ----------------- Before & After ----------------- */
+.bna {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--bone);
+}
+.bna__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .bna__inner {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+  }
+}
+.bna__copy { padding-right: 2rem; }
+.bna__copy h3 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  line-height: 1.04;
+  margin: 1.5rem 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+.bna__copy h3 em { font-style: italic; color: var(--gold-deep); }
+.bna__copy p {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 40ch;
+  margin: 0 0 2rem;
+}
+.bna__stats {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0 2.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--hairline);
+}
+.bna__stat-num {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.bna__stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+}
+.bna__pair {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+}
+.bna__panel {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.bna__panel--before {
+  background: linear-gradient(155deg, #b5a892 0%, #7f6e58 50%, #2e2620 100%);
+}
+.bna__panel--after {
+  background: linear-gradient(155deg, #e8d6bd 0%, #b89a7a 50%, #5d4a3a 100%);
+}
+.bna__label {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--bone);
+  padding: 0.35rem 0.75rem;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+.bna__label--before {}
+.bna__label--after  {}
+.bna__pager {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+.bna__dot {
+  width: 32px;
+  height: 1px;
+  background: var(--hairline-2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s var(--ease), height 0.3s var(--ease);
+}
+.bna__dot.is-active {
+  background: var(--ink);
+  height: 2px;
+}
+.bna__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.bna__nav button {
+  width: 44px; height: 44px;
+  border: 1px solid var(--hairline-2);
+  background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+  transition: all 0.3s var(--ease);
+  cursor: pointer;
+}
+.bna__nav button svg { width: 18px; height: 18px; stroke-width: 1.6; }
+.bna__nav button:hover {
+  background: var(--ink);
+  color: var(--bone);
+  border-color: var(--ink);
+}
+
+/* ----------------- Team — Doctor + Injectors consolidated ----------------- */
+.team { background: var(--ink-bg); color: var(--bone); }
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+@media (min-width: 760px) {
+  .team__grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+}
+.team__member { display: flex; flex-direction: column; }
+.team__photo {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  max-height: 320px;
+}
+.team__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.team__caption {
+  position: absolute;
+  bottom: 1.2rem; left: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  z-index: 1;
+}
+.team__name {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.015em;
+  color: var(--bone);
+}
+.team__name em { font-style: italic; }
+.team__role {
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1.2rem;
+}
+.team__bio {
+  color: rgba(244,239,232,0.7);
+  font-size: 0.95rem;
+  line-height: 1.72;
+  flex: 1;
+  margin: 0;
+}
+.team__bio em { font-style: italic; color: var(--gold); }
+.team__creds {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(244,239,232,0.15);
+  margin-top: 1.8rem;
+}
+.team__cred {
+  flex: 1;
+  min-width: 70px;
+  padding: 1rem 0.7rem;
+  border-right: 1px solid rgba(244,239,232,0.15);
+}
+.team__cred:last-child { border-right: none; }
+.team__cred-num {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.team__cred-num em { font-style: italic; }
+.team__cred-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.5);
+  line-height: 1.4;
+}
+
+/* ----------------- Specials ----------------- */
+.specials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+}
+@media (min-width: 800px) {
+  .specials__grid { grid-template-columns: repeat(3, 1fr); }
+}
+.special {
+  background: #fff;
+  padding: 2.8rem 2.4rem 2.4rem;
+  position: relative;
+  border-top: 3px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s var(--ease);
+}
+.special:hover { background: #fff; }
+.special__badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  background: none;
+  padding: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gold);
+  margin-bottom: 0;
+}
+.special__amount {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 6.5rem;
+  line-height: 0.9;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+.special__amount em {
+  font-style: italic;
+  color: var(--gold-deep);
+  font-size: 0.6em;
+}
+.special__title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+.special__body {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--smoke);
+  margin-bottom: 1.5rem;
+}
+.special__expires {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--hairline);
+}
+.special__link {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.4rem;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.special__link:hover {
+  color: var(--gold-deep);
+  border-color: var(--gold-deep);
+}
+
+/* ----------------- Reviews ----------------- */
+.reviews {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--bone);
+}
+.reviews__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (min-width: 860px) {
+  .reviews__inner { grid-template-columns: 1fr 1.7fr; gap: 7rem; }
+}
+.reviews__heading {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 1.2rem 0 1rem;
+}
+.reviews__heading em { font-style: italic; color: var(--gold-deep); }
+.reviews__meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  margin-bottom: 0;
+}
+.reviews__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+}
+.reviews__nav button {
+  width: 44px; height: 44px;
+  border: 1px solid var(--hairline-2);
+  background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+  transition: all 0.3s var(--ease);
+  cursor: pointer;
+}
+.reviews__nav button:hover { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+.reviews__nav button svg { width: 18px; height: 18px; stroke-width: 1.6; }
+.reviews__counter {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--smoke);
+  margin-left: 0.75rem;
+}
+.reviews__quote-mark {
+  font-family: var(--serif);
+  font-size: 5rem;
+  line-height: 0.6;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.reviews__slide {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+.reviews__quote {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+  line-height: 1.32;
+  color: var(--ink);
+  margin: 0 0 2.5rem;
+  font-style: italic;
+}
+.reviews__stars {
+  display: flex;
+  gap: 2px;
+  color: var(--gold-deep);
+  margin-bottom: 1.5rem;
+}
+.reviews__stars svg { width: 14px; height: 14px; fill: currentColor; }
+.reviews__attr {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+.reviews__attr strong { color: var(--ink); font-weight: 500; }
+
+/* ----------------- FAQ ----------------- */
+.faq__list {
+  border-top: 1px solid var(--ink);
+}
+.faq-item {
+  border-bottom: 1px solid var(--hairline);
+}
+.faq-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ink);
+  transition: color 0.3s var(--ease);
+}
+.faq-item__trigger::-webkit-details-marker { display: none; }
+.faq-item__trigger:hover { color: var(--gold-deep); }
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  position: relative;
+  transition: background 0.3s var(--ease);
+}
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  background: var(--ink);
+  transition: all 0.3s var(--ease);
+}
+.faq-item__icon::before {
+  width: 10px; height: 1px;
+  transform: translate(-50%, -50%);
+}
+.faq-item__icon::after {
+  width: 1px; height: 10px;
+  transform: translate(-50%, -50%);
+}
+.faq-item[open] .faq-item__icon { background: var(--ink); }
+.faq-item[open] .faq-item__icon::before,
+.faq-item[open] .faq-item__icon::after { background: var(--bone); }
+.faq-item[open] .faq-item__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item__panel {
+  padding: 0 0 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ----------------- Visit — CTA + Location consolidated ----------------- */
+.visit__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  position: relative;
+}
+@media (min-width: 900px) {
+  .visit__inner { grid-template-columns: 0.9fr 1.1fr; gap: 6rem; align-items: start; }
+}
+.visit__heading {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 5.4vw, 5rem);
+  line-height: 0.98;
+  margin: 1.5rem 0 1.5rem;
+  letter-spacing: -0.025em;
+  color: var(--bone);
+}
+.visit__heading em { font-style: italic; color: var(--gold); }
+.visit__lede {
+  color: rgba(244,239,232,0.7);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  max-width: 40ch;
+}
+.visit__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(244,239,232,0.18);
+  margin-bottom: 2.5rem;
+}
+.visit__detail-label {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.45);
+  margin-bottom: 0.4rem;
+}
+.visit__detail-value {
+  color: rgba(244,239,232,0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.visit__detail-value a { transition: color 0.2s var(--ease); }
+.visit__detail-value a:hover { color: var(--gold); }
+.visit__map {
+  aspect-ratio: 16 / 7;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #2e2920 0%, #4a3f32 100%);
+}
+.visit__map::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(244,239,232,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,239,232,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.visit__map-pin {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.visit__pin-dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--gold-deep);
+  border: 3px solid var(--bone);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: relative;
+}
+.visit__pin-dot::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-top-color: var(--gold-deep);
+}
+.visit__pin-label {
+  margin-top: 0.8rem;
+  background: var(--bone);
+  color: var(--ink);
+  padding: 0.4rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Form (dark CTA context) */
+.form {
+  background: rgba(244, 239, 232, 0.04);
+  border: 1px solid rgba(244,239,232,0.12);
+  padding: clamp(2rem, 4vw, 3rem);
+}
+.form__heading {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--bone);
+}
+.form__sub {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.6);
+  margin: 0 0 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(244,239,232,0.12);
+}
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.form__row--2 { grid-template-columns: 1fr 1fr; }
+@media (max-width: 600px) {
+  .form__row--2 { grid-template-columns: 1fr; }
+}
+.field { position: relative; }
+.field label {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.55);
+  margin-bottom: 0.6rem;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(244,239,232,0.25);
+  padding: 0.7rem 0;
+  color: var(--bone);
+  font-family: var(--sans);
+  font-size: 1rem;
+  border-radius: 0;
+  transition: border-color 0.3s var(--ease);
+}
+.field textarea { resize: vertical; min-height: 80px; }
+.field select {
+  appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 18px, calc(100% - 8px) 18px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+.field select option { background: var(--ink-bg); color: var(--bone); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea { border-bottom-color: #C95856; }
+.field__error {
+  display: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #D67270;
+  margin-top: 0.4rem;
+}
+.field.has-error .field__error { display: block; }
+.form__consent {
+  margin-bottom: 1.5rem;
+}
+.form__consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+.form__consent-label input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.15rem;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+.form__consent-label span {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(244,239,232,0.5);
+}
+.form__success {
+  display: none;
+  padding: 2rem;
+  border: 1px solid var(--gold);
+  text-align: center;
+}
+.form__success.is-visible { display: block; }
+.form__success-mark {
+  display: inline-block;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 1.4rem;
+  line-height: 42px;
+  margin-bottom: 1rem;
+}
+.form__success-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--bone);
+  margin: 0 0 0.5rem;
+}
+.form__success-body {
+  font-size: 0.92rem;
+  color: rgba(244,239,232,0.7);
+  margin: 0;
+}
+
+/* ----------------- Sister bar ----------------- */
+.sister-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--ink);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+@media (min-width: 800px) {
+  .sister-bar { grid-template-columns: repeat(3, 1fr); }
+}
+.sister {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.3s var(--ease);
+}
+@media (min-width: 800px) {
+  .sister { border-bottom: none; border-right: 1px solid rgba(255,255,255,0.08); }
+  .sister:last-child { border-right: none; }
+}
+.sister:hover { background: var(--ink-bg-2); }
+.sister__label {
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.sister__name {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--bone);
+  font-weight: 400;
+}
+.sister__sub {
+  font-size: 0.85rem;
+  color: rgba(244,239,232,0.55);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.sister__sub .arr {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--gold);
+  transition: transform 0.3s var(--ease);
+}
+.sister:hover .sister__sub .arr { transform: translateX(4px); }
+
+/* ----------------- Footer ----------------- */
+.site-footer {
+  background: var(--ink);
+  color: rgba(244,239,232,0.55);
+  padding: 3rem 0;
+  font-size: 0.78rem;
+}
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.site-footer__brand { display: flex; align-items: center; }
+.site-footer__family {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.site-footer__family-label {
+  color: rgba(244,239,232,0.4);
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+}
+.site-footer__sep { color: rgba(244,239,232,0.3); }
+.site-footer__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.site-footer__links {
+  display: flex;
+  gap: 2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+.site-footer a:hover { color: var(--gold); }
+
+/* ----------------- Tablet / mobile ----------------- */
+@media (max-width: 900px) {
+  .hero__visual-card { left: -1rem; bottom: -1.5rem; width: 45%; }
+  .bna__copy { padding-right: 0; }
+}
+@media (max-width: 600px) {
+  .hero__cta-row .btn { flex: 1; }
+  .team__cred { min-width: 100px; padding: 1rem 0.7rem; }
+}
+
+/* ── V4: Jost headline overrides ─────────────────────────── */
+h1, h2, h3, h4,
+.h2, .h3, .display,
+.hero__title,
+.approach__quote,
+.pillar__title,
+.bna__copy h3,
+.team__name,
+.special__title,
+.reviews__heading,
+.reviews__quote,
+.faq-item__trigger,
+.visit__heading,
+.form__heading,
+.form__success-title,
+.t-item__trigger span,
+.sister__name {
+  font-family: var(--sans);
+  letter-spacing: -0.02em;
+}
+
+.serif-italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — sleek black, landing-page minimal
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="container container--wide site-header__inner">
+    <a href="#" class="logo" aria-label="Lussier Aesthetics">
+      <svg width="194" height="65" viewBox="0 0 194 65" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#llogo)"><path d="M57.8145 56.3579C58.1838 56.3579 58.5292 56.3985 58.8584 56.4712C59.1874 56.5519 59.4925 56.6648 59.7734 56.81C60.0545 56.9635 60.2959 57.1417 60.5127 57.3598L60.1836 58.0952C59.8385 57.7803 59.477 57.5541 59.0918 57.4087C58.7064 57.2633 58.2804 57.1987 57.8066 57.1987C57.4052 57.1987 57.052 57.2631 56.7549 57.3843C56.4578 57.5054 56.2331 57.6832 56.0645 57.9175C55.8959 58.1517 55.8155 58.426 55.8154 58.7329C55.8154 59.1045 55.9276 59.3956 56.1523 59.6138C56.3772 59.8319 56.7468 59.9853 57.2607 60.0903L58.457 60.3413C59.2278 60.5029 59.7984 60.7445 60.1758 61.0757C60.5451 61.3987 60.7294 61.8434 60.7295 62.4087C60.7295 62.853 60.6091 63.2576 60.3682 63.605C60.1273 63.9523 59.7817 64.2265 59.332 64.4204C58.8824 64.6143 58.3524 64.7114 57.7422 64.7114L57.7588 64.6958C57.3414 64.6958 56.9396 64.6552 56.5703 64.5825C56.2009 64.5017 55.8549 64.3969 55.5498 64.2514C55.2447 64.1061 54.9559 63.9361 54.707 63.7261L55.0361 62.9663C55.2931 63.1602 55.5581 63.3221 55.8311 63.4595C56.1041 63.5968 56.3936 63.6937 56.7148 63.7583C57.0358 63.8229 57.3809 63.8549 57.75 63.855C58.4406 63.855 58.9469 63.7258 59.2842 63.4673C59.6133 63.2088 59.7822 62.8696 59.7822 62.4497C59.7822 62.2235 59.7333 62.037 59.6289 61.8755C59.5245 61.7141 59.3557 61.5773 59.123 61.4643C58.8902 61.3513 58.5853 61.2541 58.208 61.1733L57.0117 60.9311C56.289 60.7776 55.7588 60.5268 55.3975 60.1714C55.0442 59.824 54.8672 59.3549 54.8672 58.7651C54.8673 58.2806 54.9885 57.861 55.2373 57.4975C55.4862 57.134 55.8316 56.8587 56.2812 56.6567C56.7308 56.4549 57.2365 56.3579 57.8145 56.3579ZM169.005 56.3579C169.374 56.3579 169.72 56.3985 170.049 56.4712C170.378 56.5519 170.683 56.6648 170.964 56.81C171.245 56.9635 171.486 57.1417 171.703 57.3598L171.374 58.0952C171.029 57.7803 170.667 57.5541 170.282 57.4087C169.897 57.2633 169.471 57.1987 168.997 57.1987C168.596 57.1987 168.242 57.2631 167.945 57.3843C167.648 57.5054 167.424 57.6832 167.255 57.9175C167.086 58.1517 167.006 58.426 167.006 58.7329C167.006 59.1045 167.118 59.3956 167.343 59.6138C167.568 59.8319 167.937 59.9853 168.451 60.0903L169.647 60.3413C170.418 60.5029 170.989 60.7445 171.366 61.0757C171.735 61.3987 171.92 61.8434 171.92 62.4087C171.92 62.853 171.799 63.2576 171.559 63.605C171.318 63.9523 170.972 64.2265 170.522 64.4204C170.073 64.6143 169.543 64.7114 168.933 64.7114L168.949 64.6958C168.532 64.6958 168.13 64.6552 167.761 64.5825C167.391 64.5017 167.045 64.3969 166.74 64.2514C166.435 64.1061 166.146 63.9361 165.897 63.7261L166.227 62.9663C166.483 63.1602 166.748 63.3221 167.021 63.4595C167.295 63.5968 167.584 63.6937 167.905 63.7583C168.226 63.8229 168.571 63.8549 168.94 63.855C169.631 63.855 170.137 63.7258 170.475 63.4673C170.804 63.2088 170.973 62.8696 170.973 62.4497C170.973 62.2235 170.924 62.037 170.819 61.8755C170.715 61.7141 170.546 61.5773 170.313 61.4643C170.081 61.3513 169.776 61.2541 169.398 61.1733L168.202 60.9311C167.479 60.7776 166.949 60.5268 166.588 60.1714C166.235 59.824 166.058 59.3549 166.058 58.7651C166.058 58.2806 166.179 57.861 166.428 57.4975C166.677 57.134 167.022 56.8587 167.472 56.6567C167.921 56.4549 168.427 56.3579 169.005 56.3579ZM152.929 56.3423C153.491 56.3423 154.005 56.4311 154.479 56.6089C154.952 56.7866 155.354 57.045 155.675 57.3843L155.306 58.1597C154.952 57.8285 154.591 57.5863 154.214 57.4409C153.836 57.2874 153.419 57.2143 152.961 57.2143C152.054 57.2143 151.355 57.505 150.873 58.0786C150.391 58.6521 150.15 59.4682 150.15 60.5102C150.15 61.5524 150.391 62.369 150.873 62.9507C151.355 63.5322 152.054 63.8227 152.961 63.8227C153.419 63.8227 153.836 63.7497 154.214 63.5962C154.591 63.4427 154.961 63.2085 155.306 62.8774L155.675 63.6528C155.354 63.984 154.952 64.2427 154.479 64.4204C154.005 64.5981 153.491 64.6958 152.929 64.6958C152.134 64.6958 151.452 64.5252 150.89 64.186C150.328 63.8467 149.885 63.3708 149.588 62.7407C149.283 62.1186 149.139 61.3747 149.139 60.5102C149.139 59.6459 149.291 58.9106 149.588 58.2886C149.893 57.6665 150.328 57.1904 150.89 56.8511C151.46 56.5118 152.134 56.3423 152.929 56.3423ZM44.3896 57.2544H40.2061V60.0747H44.1484V60.8745H40.2061V63.8071H44.3896V64.6069H39.2822V56.4546H44.3896V57.2544ZM110.476 57.2544H106.292V60.0747H110.234V60.8745H106.292V63.8071H110.476V64.6069H105.368V56.4546H110.476V57.2544ZM28.8916 64.5903H27.9199L27.0283 62.5141H22.8223L21.9375 64.5903H20.958L24.5234 56.4546H25.3262L28.8916 64.5903ZM77.2471 57.271H74.3086V64.5903H73.3604V57.271H70.4219V56.4546H77.2471V57.271ZM88.4014 60.0581H93.251V56.4546H94.1914V64.5903H93.251V60.8745H88.4014V64.5903H87.4619V56.4546H88.4014V60.0581ZM127.104 57.271H124.166V64.5903H123.218V57.271H120.279V56.4546H127.104V57.271ZM138.258 64.5903H137.318V56.4546H138.258V64.5903ZM23.1621 61.7143H26.7041L24.9492 57.562H24.917L23.1621 61.7143ZM120.721 26.5698C116.842 4.92661 142.555 -8.79987 157.892 6.50145C158.245 6.85699 159.763 8.5296 159.907 8.86082C159.995 9.06261 160.06 9.19217 159.907 9.39403L130.1 39.3667C138.483 46.3467 150.833 44.7064 158.092 36.9106C158.365 36.6198 159.562 34.6563 159.987 35.0845V35.0923C160.276 35.375 158.646 37.2501 158.365 37.5571C146.385 50.5717 123.853 44.0359 120.721 26.5698ZM84.9404 42.978C88.6502 36.62 99.7473 35.8356 105.513 39.6811L105.521 39.6899C106.171 40.1267 109.808 43.3007 109.086 44.0278C107.608 44.3671 107.48 42.6866 106.645 41.6606C101.947 35.8683 90.569 36.9911 86.2891 42.8804C85.7591 43.6074 85.9114 44.2136 84.8916 44.0278C84.2657 43.9146 84.7477 43.3012 84.9404 42.978ZM66.6396 37.3306C71.4415 36.7812 77.6406 38.4456 80.4189 42.687C80.7241 43.1474 81.4067 43.8583 80.54 44.02C79.392 44.23 79.6401 43.4788 79.2148 42.8003C74.9992 36.0141 63.4839 36.5144 58.5215 42.2827C57.9755 42.921 57.6139 44.2945 56.6504 43.9956C55.9524 43.7853 56.9242 42.6783 57.165 42.3794C59.2528 39.7621 63.3315 37.7022 66.6396 37.3306ZM178.561 0.475082C184.27 0.475284 188.895 7.13186 188.413 12.5688C188.02 16.9313 183.515 22.5218 178.922 22.522H175.573L178.817 24.4526C183.547 29.0252 185.666 36.6034 189.553 41.7173C189.938 42.2261 190.452 42.6945 191.03 42.9692C191.608 43.2439 192.58 43.3091 192.966 43.5757C193.191 43.7291 193.166 43.7853 192.966 43.9468C190.083 44.181 187.971 42.3717 186.478 40.0854C183.691 35.8118 181.523 30.6334 178.688 26.4243C177.54 24.7197 174.891 22.5464 172.763 22.5464H165.608V44.0444H163.979V0.475082H178.561ZM51.4551 32.645C51.4548 33.8409 50.0499 36.9351 49.3594 38.0014C43.9551 46.3383 31.4204 45.9743 26.6025 37.2251C26.1206 36.344 25.0049 33.5409 25.0049 32.6362V0.475082L26.5225 0.49852L26.8115 0.927231V31.7241C28.458 46.5322 49.36 46.249 50.9258 31.5376L50.9482 0.77684L51.4551 0.475082V32.645ZM115.783 44.0278H113.96V0.466293H115.783V44.0278ZM0 0.749496C0.385398 0.31328 1.42091 0.313363 1.81445 0.749496V43.4702C7.17841 43.3005 12.6794 43.6964 18.0273 43.4702C19.4646 43.4136 21.2792 43.2843 22.6924 43.0581C23.9049 42.8642 25.0692 42.4927 26.1934 42.0161C26.8518 42.0161 26.7879 43.6968 26.3623 44.02H0V0.749496ZM141.471 0.709457C134.838 0.959895 128.872 4.89373 125.491 10.5083C120.015 19.5888 121.636 31.9337 129.666 38.9057L158.333 10.1938C155.611 3.46429 148.392 0.45106 141.471 0.709457ZM83.6152 0.636215C85.4538 -0.0583805 85.0041 0.999877 85.3975 2.14696C85.7427 3.15667 86.2165 4.02126 86.8828 4.8452C89.8619 8.50491 100.309 13.0701 104.79 15.9946C115.357 22.8939 108.901 33.9536 98.1172 34.7212C92.9058 35.1009 86.3053 32.7657 84.2256 27.563C83.9766 26.9408 83.0933 24.2509 83.832 24.0005C84.1373 23.9439 85.5256 23.8792 85.5264 24.2505L85.5342 24.2348C85.6224 25.1557 85.4138 26.2623 85.5342 27.1509C86.1926 32.0709 93.0103 34.2279 97.21 34.1714C103.409 34.0904 110.957 29.0737 107.97 22.0776C106.813 19.3793 104.677 18.2647 102.316 16.8266C97.8438 14.096 92.6651 11.6961 88.3691 8.812C85.647 6.99426 83.4065 4.06972 83.6152 0.636215ZM56.876 0.482895C57.0928 3.80321 59.2927 5.87115 61.9023 7.54344C66.391 10.4195 71.426 12.7947 75.9629 15.6304C88.5055 23.4749 79.3268 35.6902 67.1455 34.7046C61.5166 34.244 55.1253 30.2936 55.4385 23.9761H57.2373C57.3237 24.9196 57.1172 26.0548 57.2373 26.9731C58.1366 33.7269 68.4381 35.1007 73.6416 33.2671C80.3625 30.9 83.1654 23.4995 76.9746 18.6118C72.51 15.0894 65.3956 12.2452 60.4492 8.99754C57.5263 7.08286 55.1336 4.19916 55.4307 0.482895H56.876ZM57.2529 23.9761H57.2373C57.2371 23.9735 57.2375 23.9708 57.2373 23.9682L57.2529 23.9761ZM165.608 21.9722H177.838C182.423 21.9719 186.293 16.3258 186.454 12.0522C186.631 7.41507 182.921 1.01634 177.838 1.0161H165.608V21.9722ZM50.9482 0.77684L50.9414 0.781723L50.9492 0.773911L50.9482 0.77684Z" fill="white"/></g><defs><clipPath id="llogo"><rect width="193.61" height="64.5368" fill="white"/></clipPath></defs></svg>
+    </a>
+    <div class="header__right">
+      <a href="tel:+16612603021" class="header__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (661) 260-3021
+      </a>
+      <a href="#book" class="header-cta">Book Consult <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <!-- Top: large logo + phone/CTA -->
+  <div class="hero__top">
+    <a href="#" class="hero__logo" aria-label="Lussier Aesthetics">
+      <svg width="194" height="65" viewBox="0 0 194 65" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#hlogo)"><path d="M57.8145 56.3579C58.1838 56.3579 58.5292 56.3985 58.8584 56.4712C59.1874 56.5519 59.4925 56.6648 59.7734 56.81C60.0545 56.9635 60.2959 57.1417 60.5127 57.3598L60.1836 58.0952C59.8385 57.7803 59.477 57.5541 59.0918 57.4087C58.7064 57.2633 58.2804 57.1987 57.8066 57.1987C57.4052 57.1987 57.052 57.2631 56.7549 57.3843C56.4578 57.5054 56.2331 57.6832 56.0645 57.9175C55.8959 58.1517 55.8155 58.426 55.8154 58.7329C55.8154 59.1045 55.9276 59.3956 56.1523 59.6138C56.3772 59.8319 56.7468 59.9853 57.2607 60.0903L58.457 60.3413C59.2278 60.5029 59.7984 60.7445 60.1758 61.0757C60.5451 61.3987 60.7294 61.8434 60.7295 62.4087C60.7295 62.853 60.6091 63.2576 60.3682 63.605C60.1273 63.9523 59.7817 64.2265 59.332 64.4204C58.8824 64.6143 58.3524 64.7114 57.7422 64.7114L57.7588 64.6958C57.3414 64.6958 56.9396 64.6552 56.5703 64.5825C56.2009 64.5017 55.8549 64.3969 55.5498 64.2514C55.2447 64.1061 54.9559 63.9361 54.707 63.7261L55.0361 62.9663C55.2931 63.1602 55.5581 63.3221 55.8311 63.4595C56.1041 63.5968 56.3936 63.6937 56.7148 63.7583C57.0358 63.8229 57.3809 63.8549 57.75 63.855C58.4406 63.855 58.9469 63.7258 59.2842 63.4673C59.6133 63.2088 59.7822 62.8696 59.7822 62.4497C59.7822 62.2235 59.7333 62.037 59.6289 61.8755C59.5245 61.7141 59.3557 61.5773 59.123 61.4643C58.8902 61.3513 58.5853 61.2541 58.208 61.1733L57.0117 60.9311C56.289 60.7776 55.7588 60.5268 55.3975 60.1714C55.0442 59.824 54.8672 59.3549 54.8672 58.7651C54.8673 58.2806 54.9885 57.861 55.2373 57.4975C55.4862 57.134 55.8316 56.8587 56.2812 56.6567C56.7308 56.4549 57.2365 56.3579 57.8145 56.3579ZM169.005 56.3579C169.374 56.3579 169.72 56.3985 170.049 56.4712C170.378 56.5519 170.683 56.6648 170.964 56.81C171.245 56.9635 171.486 57.1417 171.703 57.3598L171.374 58.0952C171.029 57.7803 170.667 57.5541 170.282 57.4087C169.897 57.2633 169.471 57.1987 168.997 57.1987C168.596 57.1987 168.242 57.2631 167.945 57.3843C167.648 57.5054 167.424 57.6832 167.255 57.9175C167.086 58.1517 167.006 58.426 167.006 58.7329C167.006 59.1045 167.118 59.3956 167.343 59.6138C167.568 59.8319 167.937 59.9853 168.451 60.0903L169.647 60.3413C170.418 60.5029 170.989 60.7445 171.366 61.0757C171.735 61.3987 171.92 61.8434 171.92 62.4087C171.92 62.853 171.799 63.2576 171.559 63.605C171.318 63.9523 170.972 64.2265 170.522 64.4204C170.073 64.6143 169.543 64.7114 168.933 64.7114L168.949 64.6958C168.532 64.6958 168.13 64.6552 167.761 64.5825C167.391 64.5017 167.045 64.3969 166.74 64.2514C166.435 64.1061 166.146 63.9361 165.897 63.7261L166.227 62.9663C166.483 63.1602 166.748 63.3221 167.021 63.4595C167.295 63.5968 167.584 63.6937 167.905 63.7583C168.226 63.8229 168.571 63.8549 168.94 63.855C169.631 63.855 170.137 63.7258 170.475 63.4673C170.804 63.2088 170.973 62.8696 170.973 62.4497C170.973 62.2235 170.924 62.037 170.819 61.8755C170.715 61.7141 170.546 61.5773 170.313 61.4643C170.081 61.3513 169.776 61.2541 169.398 61.1733L168.202 60.9311C167.479 60.7776 166.949 60.5268 166.588 60.1714C166.235 59.824 166.058 59.3549 166.058 58.7651C166.058 58.2806 166.179 57.861 166.428 57.4975C166.677 57.134 167.022 56.8587 167.472 56.6567C167.921 56.4549 168.427 56.3579 169.005 56.3579ZM152.929 56.3423C153.491 56.3423 154.005 56.4311 154.479 56.6089C154.952 56.7866 155.354 57.045 155.675 57.3843L155.306 58.1597C154.952 57.8285 154.591 57.5863 154.214 57.4409C153.836 57.2874 153.419 57.2143 152.961 57.2143C152.054 57.2143 151.355 57.505 150.873 58.0786C150.391 58.6521 150.15 59.4682 150.15 60.5102C150.15 61.5524 150.391 62.369 150.873 62.9507C151.355 63.5322 152.054 63.8227 152.961 63.8227C153.419 63.8227 153.836 63.7497 154.214 63.5962C154.591 63.4427 154.961 63.2085 155.306 62.8774L155.675 63.6528C155.354 63.984 154.952 64.2427 154.479 64.4204C154.005 64.5981 153.491 64.6958 152.929 64.6958C152.134 64.6958 151.452 64.5252 150.89 64.186C150.328 63.8467 149.885 63.3708 149.588 62.7407C149.283 62.1186 149.139 61.3747 149.139 60.5102C149.139 59.6459 149.291 58.9106 149.588 58.2886C149.893 57.6665 150.328 57.1904 150.89 56.8511C151.46 56.5118 152.134 56.3423 152.929 56.3423ZM44.3896 57.2544H40.2061V60.0747H44.1484V60.8745H40.2061V63.8071H44.3896V64.6069H39.2822V56.4546H44.3896V57.2544ZM110.476 57.2544H106.292V60.0747H110.234V60.8745H106.292V63.8071H110.476V64.6069H105.368V56.4546H110.476V57.2544ZM28.8916 64.5903H27.9199L27.0283 62.5141H22.8223L21.9375 64.5903H20.958L24.5234 56.4546H25.3262L28.8916 64.5903ZM77.2471 57.271H74.3086V64.5903H73.3604V57.271H70.4219V56.4546H77.2471V57.271ZM88.4014 60.0581H93.251V56.4546H94.1914V64.5903H93.251V60.8745H88.4014V64.5903H87.4619V56.4546H88.4014V60.0581ZM127.104 57.271H124.166V64.5903H123.218V57.271H120.279V56.4546H127.104V57.271ZM138.258 64.5903H137.318V56.4546H138.258V64.5903ZM23.1621 61.7143H26.7041L24.9492 57.562H24.917L23.1621 61.7143ZM120.721 26.5698C116.842 4.92661 142.555 -8.79987 157.892 6.50145C158.245 6.85699 159.763 8.5296 159.907 8.86082C159.995 9.06261 160.06 9.19217 159.907 9.39403L130.1 39.3667C138.483 46.3467 150.833 44.7064 158.092 36.9106C158.365 36.6198 159.562 34.6563 159.987 35.0845V35.0923C160.276 35.375 158.646 37.2501 158.365 37.5571C146.385 50.5717 123.853 44.0359 120.721 26.5698ZM84.9404 42.978C88.6502 36.62 99.7473 35.8356 105.513 39.6811L105.521 39.6899C106.171 40.1267 109.808 43.3007 109.086 44.0278C107.608 44.3671 107.48 42.6866 106.645 41.6606C101.947 35.8683 90.569 36.9911 86.2891 42.8804C85.7591 43.6074 85.9114 44.2136 84.8916 44.0278C84.2657 43.9146 84.7477 43.3012 84.9404 42.978ZM66.6396 37.3306C71.4415 36.7812 77.6406 38.4456 80.4189 42.687C80.7241 43.1474 81.4067 43.8583 80.54 44.02C79.392 44.23 79.6401 43.4788 79.2148 42.8003C74.9992 36.0141 63.4839 36.5144 58.5215 42.2827C57.9755 42.921 57.6139 44.2945 56.6504 43.9956C55.9524 43.7853 56.9242 42.6783 57.165 42.3794C59.2528 39.7621 63.3315 37.7022 66.6396 37.3306ZM178.561 0.475082C184.27 0.475284 188.895 7.13186 188.413 12.5688C188.02 16.9313 183.515 22.5218 178.922 22.522H175.573L178.817 24.4526C183.547 29.0252 185.666 36.6034 189.553 41.7173C189.938 42.2261 190.452 42.6945 191.03 42.9692C191.608 43.2439 192.58 43.3091 192.966 43.5757C193.191 43.7291 193.166 43.7853 192.966 43.9468C190.083 44.181 187.971 42.3717 186.478 40.0854C183.691 35.8118 181.523 30.6334 178.688 26.4243C177.54 24.7197 174.891 22.5464 172.763 22.5464H165.608V44.0444H163.979V0.475082H178.561ZM51.4551 32.645C51.4548 33.8409 50.0499 36.9351 49.3594 38.0014C43.9551 46.3383 31.4204 45.9743 26.6025 37.2251C26.1206 36.344 25.0049 33.5409 25.0049 32.6362V0.475082L26.5225 0.49852L26.8115 0.927231V31.7241C28.458 46.5322 49.36 46.249 50.9258 31.5376L50.9482 0.77684L51.4551 0.475082V32.645ZM115.783 44.0278H113.96V0.466293H115.783V44.0278ZM0 0.749496C0.385398 0.31328 1.42091 0.313363 1.81445 0.749496V43.4702C7.17841 43.3005 12.6794 43.6964 18.0273 43.4702C19.4646 43.4136 21.2792 43.2843 22.6924 43.0581C23.9049 42.8642 25.0692 42.4927 26.1934 42.0161C26.8518 42.0161 26.7879 43.6968 26.3623 44.02H0V0.749496ZM141.471 0.709457C134.838 0.959895 128.872 4.89373 125.491 10.5083C120.015 19.5888 121.636 31.9337 129.666 38.9057L158.333 10.1938C155.611 3.46429 148.392 0.45106 141.471 0.709457ZM83.6152 0.636215C85.4538 -0.0583805 85.0041 0.999877 85.3975 2.14696C85.7427 3.15667 86.2165 4.02126 86.8828 4.8452C89.8619 8.50491 100.309 13.0701 104.79 15.9946C115.357 22.8939 108.901 33.9536 98.1172 34.7212C92.9058 35.1009 86.3053 32.7657 84.2256 27.563C83.9766 26.9408 83.0933 24.2509 83.832 24.0005C84.1373 23.9439 85.5256 23.8792 85.5264 24.2505L85.5342 24.2348C85.6224 25.1557 85.4138 26.2623 85.5342 27.1509C86.1926 32.0709 93.0103 34.2279 97.21 34.1714C103.409 34.0904 110.957 29.0737 107.97 22.0776C106.813 19.3793 104.677 18.2647 102.316 16.8266C97.8438 14.096 92.6651 11.6961 88.3691 8.812C85.647 6.99426 83.4065 4.06972 83.6152 0.636215ZM56.876 0.482895C57.0928 3.80321 59.2927 5.87115 61.9023 7.54344C66.391 10.4195 71.426 12.7947 75.9629 15.6304C88.5055 23.4749 79.3268 35.6902 67.1455 34.7046C61.5166 34.244 55.1253 30.2936 55.4385 23.9761H57.2373C57.3237 24.9196 57.1172 26.0548 57.2373 26.9731C58.1366 33.7269 68.4381 35.1007 73.6416 33.2671C80.3625 30.9 83.1654 23.4995 76.9746 18.6118C72.51 15.0894 65.3956 12.2452 60.4492 8.99754C57.5263 7.08286 55.1336 4.19916 55.4307 0.482895H56.876ZM57.2529 23.9761H57.2373C57.2371 23.9735 57.2375 23.9708 57.2373 23.9682L57.2529 23.9761ZM165.608 21.9722H177.838C182.423 21.9719 186.293 16.3258 186.454 12.0522C186.631 7.41507 182.921 1.01634 177.838 1.0161H165.608V21.9722ZM50.9482 0.77684L50.9414 0.781723L50.9492 0.773911L50.9482 0.77684Z" fill="white"/></g><defs><clipPath id="hlogo"><rect width="193.61" height="64.5368" fill="white"/></clipPath></defs></svg>
+    </a>
+    <div class="hero__top-right">
+      <a href="tel:+16612603021" class="header__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (661) 260-3021
+      </a>
+      <a href="#book" class="header-cta">Book Consult <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <!-- Bottom: headline + copy right-aligned -->
+  <div class="hero__bottom">
+    <div class="hero__copy">
+      <h1 class="hero__title">Looking good was never this <em>easy.</em></h1>
+      <p class="hero__lede">
+        Refined, non-surgical treatments for face and body — under the medical
+        direction of Marc Lussier, MD, FACS, the Santa Clarita Valley's #1
+        cosmetic surgeon every year since 2011.
+      </p>
+      <div class="hero__cta-row">
+        <a href="#book" class="btn">Book a Consultation <span class="arrow">→</span></a>
+      </div>
+      <div class="hero__trust">
+        <div class="hero__trust-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <span><strong>4.9</strong> on Google · Hundreds of real reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE TRUST STRIP
+     ============================================================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Botox</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Dysport</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Juvederm</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Restylane</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Morpheus8</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">BBL · MOXI</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">PRF</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Upneeq</em>
+      <span class="marquee__dot"></span>
+    </span>
+    <span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Botox</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Dysport</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Juvederm</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Restylane</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Morpheus8</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">BBL · MOXI</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">PRF</em>
+      <span class="marquee__dot"></span>
+      <em class="serif-italic" style="font-family:var(--serif);font-style:italic;font-size:1.1em;">Upneeq</em>
+      <span class="marquee__dot"></span>
+    </span>
+  </div>
+</div>
+
+<!-- ============================================================
+     APPROACH — philosophy quote + pillars consolidated
+     ============================================================ -->
+<section class="section section--ink approach" id="approach">
+  <div class="container container--wide">
+    <div class="approach__intro reveal">
+      <span class="eyebrow eyebrow--light">Our Approach</span>
+      <h2 class="approach__quote">Less is more <em>powerful.</em></h2>
+      <p class="approach__lede">
+        Most medspas have an injector. We have a board-certified plastic
+        surgeon as medical director, a team of master nurse injectors, and
+        twenty-two years of clinical judgment behind every treatment.
+      </p>
+    </div>
+
+    <div class="pillars__grid reveal">
+      <div class="pillar">
+        <h3 class="pillar__title">Physician-led care</h3>
+        <p class="pillar__body">
+          Our medical director, Marc Lussier, MD, FACS, is board-certified by
+          the American Board of Plastic Surgery with 22+ years of experience.
+          Every protocol runs through him.
+        </p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar__title">Master injectors,<br>not technicians</h3>
+        <p class="pillar__body">
+          Our registered nurse injectors trained with leaders in the field and
+          treat every visit as a clinical encounter — not a beauty appointment.
+        </p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar__title">Subtle by design</h3>
+        <p class="pillar__body">
+          Our results soften the features you don't love while preserving the
+          ones you do — calibrated conservatively, always.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TREATMENTS INDEX
+     ============================================================ -->
+<section class="section section--paper" id="treatments" style="padding:0;overflow:hidden;">
+  <div class="treatments-split">
+    <div class="treatments-split__left reveal">
+      <h2 class="h2" style="margin-top:1.2rem;">Treatments — for<br><em class="serif-italic">face and body</em>.</h2>
+      <p class="section-head__lede" style="max-width:52ch;margin-top:1.5rem;">
+        From subtle wrinkle relaxers to advanced skin resurfacing, every
+        treatment we offer is performed by clinicians trained under the
+        direction of a board-certified plastic surgeon.
+      </p>
+
+    <div class="t-accordion" id="tAccordion">
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Wrinkle <em class="serif-italic">relaxers</em></span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>Botox®</li><li>Dysport®</li><li>Letybo®</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Fillers <em class="serif-italic">&amp;</em> volumizers</span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>Juvederm® XC</li><li>Juvederm® Ultra Plus</li><li>Juvederm® Voluma</li><li>Restylane®</li><li>RHA®</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Skin texture <em class="serif-italic">improvement</em></span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>BBL/MOXI</li><li>Morpheus 8®</li><li>Microneedling</li><li>VI Peel®</li><li>Facial Thread Lifts</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Neck <em class="serif-italic">&amp;</em> body treatments</span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>BBL/MOXI</li><li>Morpheus 8®</li><li>Radiesse®</li><li>Sculptra® Aesthetic</li><li>Hair Regrowth Therapy</li><li>Spider Vein Therapy</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Natural injections <em class="serif-italic">(PRF)</em></span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>PRF Injections with Microneedling</li><li>PRF Pro Injections (EZ Gel)</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Eye <em class="serif-italic">brightening</em></span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>Upneeq®</li><li>Glytone®</li></ul></div></div>
+      </div>
+      <div class="t-item">
+        <button class="t-item__trigger"><span>Treatment support <em class="serif-italic">skincare</em></span><span class="t-item__icon" aria-hidden="true"></span></button>
+        <div class="t-item__panel"><div class="t-item__panel-inner"><ul class="t-item__list"><li>Alastin®</li><li>Zo®</li><li>Ivy Day Spa Hydrafacial</li></ul></div></div>
+      </div>
+    </div>
+    </div><!-- end .treatments-split__left -->
+
+    <div class="treatments-split__img">
+      <img src="site-images/image-19.png" alt="Lussier Aesthetics treatment" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CURRENT SPECIALS
+     ============================================================ -->
+<section class="section section--cream" id="specials">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow eyebrow--gold">Right Now</span>
+        <h2 class="h2" style="margin-top:1.2rem;">Current <em class="serif-italic">specials</em>.</h2>
+      </div>
+      <p class="section-head__lede">
+        Limited-time offers on our most-requested treatments. Mention them when
+        you book to redeem — they cannot be combined with other promotions.
+      </p>
+    </div>
+
+    <div class="specials__grid reveal">
+      <article class="special">
+        <span class="special__badge">Bundle &amp; Save</span>
+        <div class="special__amount">20<em class="serif-italic">%</em></div>
+        <h3 class="special__title">Forty units of neurotoxin + one syringe of filler</h3>
+        <p class="special__body">
+          Pair any 40-unit neurotoxin treatment — Botox, Dysport, or Letybo —
+          with a syringe of filler and save twenty percent on the combined plan.
+        </p>
+        <p class="special__expires">Book by · May 31, 2026</p>
+        <a href="#book" class="special__link">Book this offer <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="special">
+        <span class="special__badge">Skin Season</span>
+        <div class="special__amount">25<em class="serif-italic">%</em></div>
+        <h3 class="special__title">MOXI / BBL laser — package of three</h3>
+        <p class="special__body">
+          Save twenty-five percent on a three-treatment MOXI/BBL laser series
+          for brighter, smoother, more even skin tone going into summer.
+        </p>
+        <p class="special__expires">Book by · May 31, 2026</p>
+        <a href="#book" class="special__link">Book this offer <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="special">
+        <span class="special__badge">Restoration</span>
+        <div class="special__amount">20<em class="serif-italic">%</em></div>
+        <h3 class="special__title">Mommy makeover treatment combinations</h3>
+        <p class="special__body">
+          Refresh and restore with twenty percent off our mommy-makeover
+          combinations — customized to your timeline, body, and recovery
+          schedule during your consultation.
+        </p>
+        <p class="special__expires">Book by · May 31, 2026</p>
+        <a href="#book" class="special__link">Book this offer <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BEFORE & AFTER
+     ============================================================ -->
+<section class="bna" id="results">
+  <div class="container">
+    <div class="bna__inner">
+      <div class="bna__copy reveal">
+        <span class="eyebrow eyebrow--gold">Real Results</span>
+        <h3>Before <em class="serif-italic">&amp;</em> after.</h3>
+        <p>
+          Real patients. Real results. All photos taken under standardized
+          lighting in our Valencia treatment rooms — no filters, no retouching.
+        </p>
+        <div class="bna__nav" aria-label="Result navigation">
+          <button data-bna-prev aria-label="Previous result"><i data-lucide="arrow-left"></i></button>
+          <button data-bna-next aria-label="Next result"><i data-lucide="arrow-right"></i></button>
+          <span class="reviews__counter"><span id="bnaCurrent">1</span> / <span id="bnaTotal">3</span></span>
+        </div>
+      </div>
+      <div class="bna__pair" id="bnaPair" aria-label="Before and after">
+        <div class="bna__panel bna__panel--before" id="bnaBefore">
+          <span class="bna__label bna__label--before">Before</span>
+        </div>
+        <div class="bna__panel bna__panel--after" id="bnaAfter">
+          <span class="bna__label bna__label--after">After</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM — Doctor + Injectors consolidated
+     ============================================================ -->
+<section class="team" id="doctor">
+  <div class="container container--wide">
+    <div class="team__grid reveal">
+
+      <!-- Dr. Marc Lussier -->
+      <article class="team__member">
+        <div class="team__photo">
+          <img src="site-images/marc-lussier.jpg" alt="Dr. Marc Lussier, MD FACS" />
+        </div>
+        <h2 class="team__name">Dr. Marc <em>Lussier</em></h2>
+        <p class="team__role">MD, FACS &middot; Founder &amp; Medical Director</p>
+        <p class="team__bio">
+          Board-certified plastic surgeon and founder of Lussier Aesthetics, trained at NYU,
+          Baylor, and USC. Dr. Lussier brings surgical-level precision to every non-surgical
+          treatment — understanding facial anatomy at a depth most injectors never acquire.
+          He has been ranked the Santa Clarita Valley's <em>#1 cosmetic surgeon</em> every
+          year since 2011 and maintains his own on-site surgical center in Valencia. His
+          oversight of every patient plan is what separates this practice from a medspa.
+        </p>
+        <div class="team__creds">
+          <div class="team__cred">
+            <div class="team__cred-num">22<em>+</em></div>
+            <div class="team__cred-label">Years in practice</div>
+          </div>
+          <div class="team__cred">
+            <div class="team__cred-num">15<em>×</em></div>
+            <div class="team__cred-label">SCV's #1 surgeon</div>
+          </div>
+          <div class="team__cred">
+            <div class="team__cred-num">ABPS</div>
+            <div class="team__cred-label">Board-certified</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Claire Bennett -->
+      <article class="team__member">
+        <div class="team__photo">
+          <img src="site-images/claire-bennett.jpg" alt="Claire Bennett, RN" />
+        </div>
+        <h2 class="team__name">Claire Bennett, <em>RN</em></h2>
+        <p class="team__role">Lead Injector</p>
+        <p class="team__bio">
+          Eight years specialized in facial aesthetics, Claire is known for an exceptionally
+          light touch on lip work and the careful, conservative builds that define results at
+          Lussier. Patients describe her consultations as genuinely unhurried — she listens
+          before she recommends, and recommends before she injects. Her expertise spans wrinkle
+          relaxers, volumization, and skin-quality treatments including MOXI and BBL. Returning
+          patients often describe their results as looking like themselves — only better.
+        </p>
+      </article>
+
+      <!-- Jade Gonzales -->
+      <article class="team__member">
+        <div class="team__photo">
+          <img src="site-images/jade-gonzales.jpg" alt="Jade Gonzales, RN BSN" />
+        </div>
+        <h2 class="team__name">Jade Gonzales, <em>RN, BSN</em></h2>
+        <p class="team__role">Aesthetic Nurse Practitioner</p>
+        <p class="team__bio">
+          Trained at USC with advanced certifications in midface anatomy and skin resurfacing,
+          Jade brings a structural approach to facial balancing that produces notably natural
+          results. She is particularly sought after for midface filler work — cheek projection,
+          tear trough correction, and perioral refinement. Patients return year after year for
+          her combination of technical exactness and genuine care, and her skill with Morpheus8
+          and combination resurfacing protocols sets her apart in the region.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS
+     ============================================================ -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__inner reveal">
+
+      <!-- Left: heading + nav -->
+      <div class="reviews__left">
+        <span class="eyebrow eyebrow--gold">Real Reviews</span>
+        <h2 class="reviews__heading">What our<br><em>patients</em> say.</h2>
+        <p class="reviews__meta">4.9 stars &nbsp;·&nbsp; Google &amp; Yelp</p>
+        <div class="reviews__nav" aria-label="Review navigation">
+          <button id="reviewPrev" aria-label="Previous review"><i data-lucide="arrow-left"></i></button>
+          <button id="reviewNext" aria-label="Next review"><i data-lucide="arrow-right"></i></button>
+          <span class="reviews__counter"><span id="reviewCurrent">1</span> / <span id="reviewTotal">3</span></span>
+        </div>
+      </div>
+
+      <!-- Right: sliding testimonial -->
+      <div class="reviews__right">
+        <span class="reviews__quote-mark">"</span>
+        <div class="reviews__slide" id="reviewSlide">
+          <p class="reviews__quote" id="reviewText"></p>
+          <div class="reviews__stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="reviews__attr"><strong>Verified patient</strong> <span id="reviewSource"></span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section section--paper" id="faq">
+  <div class="container container--narrow">
+    <div class="section-head reveal" style="grid-template-columns:1fr;">
+      <div>
+        <span class="eyebrow eyebrow--gold">Questions, Answered</span>
+        <h2 class="h2" style="margin-top:1.2rem; max-width:18ch;">The <em class="serif-italic">real</em> questions about aesthetic treatments.</h2>
+      </div>
+    </div>
+    <div class="faq__list reveal">
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          How do I know which treatment is right for me?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          A consultation. We'll listen to your goals, assess what's actually
+          driving them, and recommend a single treatment or a combination —
+          whether that's softening expression lines, restoring volume, improving
+          texture, or something else. There's no pressure to add on, and we'll
+          quote your full plan up front.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          How much do treatments cost?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          Pricing varies by treatment. Wrinkle relaxers are priced per unit;
+          fillers per syringe; skin treatments per session or as packages. We
+          quote your full plan during your consultation, before you commit to
+          anything. Ask about our Beauty Pre-Pay savings program for returning
+          patients.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          Do treatments hurt?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          Most are very well-tolerated. Injectables involve brief pinches with
+          ultra-fine needles. Skin resurfacing treatments use topical numbing —
+          most patients describe them as warm rather than painful. We'll walk
+          you through what to expect for whatever treatment you choose.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          How much downtime is there?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          It depends on the treatment. Most injectables have no real downtime —
+          mild redness or swelling for a few hours. Skin resurfacing (Morpheus8,
+          BBL/MOXI, peels) can mean 24–72 hours of redness, peeling, or
+          sensitivity. We schedule everything around your calendar.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          Who actually performs the treatments?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          Treatments are performed by experienced registered nurses (Claire
+          Bennett, RN and Jade Gonzales, RN, BSN) under the medical direction
+          of Marc Lussier, MD, FACS — not technicians, not estheticians. Every
+          protocol is reviewed by Dr. Lussier.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          When will I see results, and how long do they last?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          Wrinkle relaxers settle in 7–14 days and last 3–4 months. Fillers are
+          visible immediately, settle in 2 weeks, and last 6–18 months depending
+          on product and area. Skin resurfacing builds gradually over 4–12 weeks
+          as collagen rebuilds.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__trigger">
+          Will I look "done"?
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__panel">
+          Not when treatment is calibrated correctly. The "overdone" look comes
+          from doing too much, too fast — not from the treatments themselves.
+          Our approach is conservative by default; we'd rather you come back for
+          a touch-up than walk out unhappy.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VISIT — Book + Location consolidated
+     ============================================================ -->
+<section class="cta visit" id="book" style="background:var(--ink-bg);">
+  <div class="container visit__inner" style="padding-top:clamp(5rem,10vw,9rem);padding-bottom:clamp(5rem,10vw,9rem);">
+    <div class="visit__copy reveal">
+      <span class="eyebrow eyebrow--light">Book Your Visit</span>
+      <h2 class="visit__heading">Let's talk through<br><em>what you want</em>.</h2>
+      <p class="visit__lede">
+        A consultation is the right place to start — even if you're an
+        experienced patient. We'll listen first, recommend second, and quote
+        your full plan before you commit to anything.
+      </p>
+
+      <div class="visit__details">
+        <div class="visit__detail">
+          <span class="visit__detail-label">Studio</span>
+          <p class="visit__detail-value">
+            24510 Town Center Drive<br>
+            Suite 180 · Valencia, CA 91355
+          </p>
+        </div>
+        <div class="visit__detail">
+          <span class="visit__detail-label">Hours</span>
+          <p class="visit__detail-value">
+            Monday – Friday<br>
+            9:00 AM – 5:00 PM
+          </p>
+        </div>
+        <div class="visit__detail">
+          <span class="visit__detail-label">Direct</span>
+          <p class="visit__detail-value">
+            <a href="tel:+16612603021">(661) 260-3021</a><br>
+            <a href="mailto:hello@lussieraesthetics.com">hello@lussieraesthetics.com</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+      <form class="form reveal" id="bookForm" novalidate>
+        <h3 class="form__heading">Request a consultation</h3>
+        <p class="form__sub">Reply within one business day</p>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" required />
+            <div class="field__error">Required</div>
+          </div>
+          <div class="field">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last_name" required />
+            <div class="field__error">Required</div>
+          </div>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <div class="field__error">Valid email required</div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+            <div class="field__error">Required</div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="treatment">Treatment of interest</label>
+            <select id="treatment" name="treatment" required>
+              <option value="">Select…</option>
+              <option>Wrinkle Relaxers (Botox / Dysport)</option>
+              <option>Fillers &amp; Volumizers</option>
+              <option>Skin Resurfacing (BBL · MOXI · Morpheus8)</option>
+              <option>Not sure — recommend for me</option>
+            </select>
+            <div class="field__error">Required</div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="patient-type">Patient type</label>
+            <select id="patient-type" name="patient_type" required>
+              <option value="">Select…</option>
+              <option value="new">I'm new to Lussier Aesthetics</option>
+              <option value="existing">I'm an existing patient</option>
+            </select>
+            <div class="field__error">Required</div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="message">What brings you in?</label>
+            <textarea id="message" name="message" rows="3" placeholder="Areas you'd like to treat, questions, anything else we should know…"></textarea>
+          </div>
+        </div>
+        <div class="form__consent">
+          <label class="form__consent-label">
+            <input type="checkbox" name="marketing_consent" required>
+            <span>By submitting this form, you agree to be contacted by phone, email, or text regarding your consultation and future promotions. Do not transmit private health information.</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block">
+          Request My Consultation <span class="arrow">→</span>
+        </button>
+      </form>
+      <div class="form__success" id="formSuccess">
+        <div class="form__success-mark">✓</div>
+        <h3 class="form__success-title">Thank you.</h3>
+        <p class="form__success-body">We'll be in touch within one business day to schedule your consultation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SISTER BRAND BAR
+     ============================================================ -->
+<div class="sister-bar">
+  <a href="#" class="sister">
+    <span class="sister__label">Medical · Surgical</span>
+    <span class="sister__name">Marc Lussier, MD</span>
+    <span class="sister__sub">
+      Board-Certified Plastic Surgeon · Valencia
+      <span class="arr">→</span>
+    </span>
+  </a>
+  <a href="#" class="sister">
+    <span class="sister__label">Aesthetics</span>
+    <span class="sister__name">Lussier Aesthetics</span>
+    <span class="sister__sub">
+      Non-surgical treatments · You are here
+      <span class="arr">—</span>
+    </span>
+  </a>
+  <a href="#" class="sister">
+    <span class="sister__label">Weight Management</span>
+    <span class="sister__name">Lussier Weight Loss</span>
+    <span class="sister__sub">
+      Medical weight loss · Valencia
+      <span class="arr">→</span>
+    </span>
+  </a>
+</div>
+
+<!-- ============================================================
+     FOOTER — compact
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container container--wide site-footer__inner">
+    <div class="site-footer__brand">
+      <span class="logo" style="text-align:left;color:var(--bone);font-size:1.4rem;">
+        Lussier
+        <span class="logo__sub" style="color:rgba(244,239,232,0.5);">Aesthetics · Valencia</span>
+      </span>
+    </div>
+    <div class="site-footer__family">
+      <span class="site-footer__family-label">The Lussier family</span>
+      <a href="#">Marc Lussier, MD, FACS</a>
+      <span class="site-footer__sep">·</span>
+      <a href="#">Lussier Weight Loss</a>
+    </div>
+    <div class="site-footer__meta">
+      <span>© 2026 Lussier Aesthetics, Inc.</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   LUSSIER AESTHETICS — interactions
+   ============================================================ */
+
+/* ---------- Sticky header: hidden until scrolled past hero ---------- */
+(() => {
+  const header = document.getElementById('site-header');
+  const hero = document.getElementById('hero');
+  if (!header) return;
+  const onScroll = () => {
+    const threshold = hero ? hero.offsetHeight * 0.6 : window.innerHeight * 0.6;
+    const past = window.scrollY > threshold;
+    header.classList.toggle('is-visible', past);
+    header.classList.toggle('is-stuck', past);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+/* ---------- Reveal on scroll ---------- */
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(e => e.classList.add('is-in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '-8% 0px -8% 0px', threshold: 0.05 });
+  els.forEach(el => io.observe(el));
+})();
+
+/* ---------- Smooth in-page anchors (offset for sticky) ---------- */
+(() => {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length <= 1) return;
+      const tgt = document.querySelector(id);
+      if (!tgt) return;
+      e.preventDefault();
+      const top = tgt.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+})();
+
+
+/* ---------- Before / After side-by-side + multiple states ---------- */
+(() => {
+  const beforeEl  = document.getElementById('bnaBefore');
+  const afterEl   = document.getElementById('bnaAfter');
+  const currentEl = document.getElementById('bnaCurrent');
+  if (!beforeEl || !afterEl) return;
+
+  const states = [
+    {
+      label: 'Forehead Lines — N° 01',
+      before: 'linear-gradient(155deg,#b5a892 0%,#7f6e58 50%,#2e2620 100%)',
+      after:  'linear-gradient(155deg,#e8d6bd 0%,#b89a7a 50%,#5d4a3a 100%)',
+    },
+    {
+      label: 'Midface Filler — N° 02',
+      before: 'linear-gradient(155deg,#c2b29a 0%,#6e5b46 55%,#241c14 100%)',
+      after:  'linear-gradient(155deg,#f0dcc1 0%,#b89476 50%,#4a3625 100%)',
+    },
+    {
+      label: 'Morpheus8 — N° 03',
+      before: 'linear-gradient(155deg,#a89a83 0%,#5e4f3c 55%,#1f1812 100%)',
+      after:  'linear-gradient(155deg,#e7d4ba 0%,#a88766 55%,#3d2e20 100%)',
+    },
+  ];
+
+  let stateIdx = 0;
+
+  const applyState = (i) => {
+    stateIdx = (i + states.length) % states.length;
+    const s = states[stateIdx];
+    beforeEl.style.background = s.before;
+    afterEl.style.background  = s.after;
+    if (currentEl) currentEl.textContent = stateIdx + 1;
+  };
+
+  document.querySelector('[data-bna-prev]')
+    ?.addEventListener('click', () => applyState(stateIdx - 1));
+  document.querySelector('[data-bna-next]')
+    ?.addEventListener('click', () => applyState(stateIdx + 1));
+
+  applyState(0);
+})();
+
+/* ---------- FAQ: smooth single-open accordion ---------- */
+(() => {
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        items.forEach(other => {
+          if (other !== item) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+})();
+
+/* ---------- Form: validation + success state ---------- */
+(() => {
+  const form = document.getElementById('bookForm');
+  const success = document.getElementById('formSuccess');
+  if (!form) return;
+
+  const validateField = (field) => {
+    const input = field.querySelector('input, select, textarea');
+    if (!input) return true;
+    let ok = true;
+    if (input.required && !input.value.trim()) ok = false;
+    if (input.type === 'email' && input.value.trim()) {
+      ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+    }
+    field.classList.toggle('has-error', !ok);
+    return ok;
+  };
+
+  form.querySelectorAll('.field').forEach(field => {
+    const input = field.querySelector('input, select, textarea');
+    if (!input) return;
+    input.addEventListener('blur', () => validateField(field));
+    input.addEventListener('input', () => {
+      if (field.classList.contains('has-error')) validateField(field);
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    form.querySelectorAll('.field').forEach(field => {
+      if (!validateField(field)) valid = false;
+    });
+    if (!valid) {
+      const firstError = form.querySelector('.field.has-error');
+      if (firstError) {
+        const top = firstError.getBoundingClientRect().top + window.scrollY - 160;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+      return;
+    }
+    form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    form.style.opacity = '0';
+    form.style.transform = 'translateY(8px)';
+    setTimeout(() => {
+      form.style.display = 'none';
+      success.classList.add('is-visible');
+    }, 400);
+  });
+})();
+
+/* ---------- Treatments accordion ---------- */
+(() => {
+  document.querySelectorAll('.t-item__trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.t-item');
+      const isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.t-item.is-open').forEach(el => el.classList.remove('is-open'));
+      if (!isOpen) item.classList.add('is-open');
+    });
+  });
+})();
+
+/* ---------- Reviews slider ---------- */
+(() => {
+  const reviews = [
+    { text: "Amazing energy and friendly staff. I love going here for my lip fillers — results are always natural.", source: "Google" },
+    { text: "I got Botox and my lips filled. My lips look so luscious and full. I'm a wuss about needles — for sure coming back.", source: "Google" },
+    { text: "Claire made me feel so comfortable and confident. My results were exactly what I asked for — nothing overdone.", source: "Yelp" },
+  ];
+  const slide     = document.getElementById('reviewSlide');
+  const textEl    = document.getElementById('reviewText');
+  const sourceEl  = document.getElementById('reviewSource');
+  const currentEl = document.getElementById('reviewCurrent');
+  if (!slide) return;
+
+  let idx = 0;
+  const show = (i) => {
+    idx = (i + reviews.length) % reviews.length;
+    slide.style.opacity   = '0';
+    slide.style.transform = 'translateY(10px)';
+    setTimeout(() => {
+      textEl.textContent    = reviews[idx].text;
+      sourceEl.textContent  = reviews[idx].source;
+      currentEl.textContent = idx + 1;
+      slide.style.opacity   = '1';
+      slide.style.transform = 'translateY(0)';
+    }, 230);
+  };
+  document.getElementById('reviewPrev')?.addEventListener('click', () => show(idx - 1));
+  document.getElementById('reviewNext')?.addEventListener('click', () => show(idx + 1));
+  show(0);
+})();
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" onload="lucide.createIcons()"></script>
+</body>
+</html>
